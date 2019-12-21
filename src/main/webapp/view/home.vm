@@ -1,0 +1,50 @@
+#parse( "src/main/webapp/view/layout/header.vm" )
+<div class="row" style="margin-top: 30px;">
+    <form method="get" action="/hotels" class="form form-inline" role="form">
+    <div class="col-md-12">
+            <div class="col-md-3" style="text-align: right;">
+                <div class="form-group">
+                    <label style="font-weight: bolder;font-size: x-large;">Search Hotels :</label>
+                </div>
+            </div>
+        <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <select id="select-city" name="city_name">
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input type="text" value="" style="width: 300px;" name="hotel_pattern">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <input type="submit" class="btn btn-primary" value="Search"></input>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <hr>
+    <h4 style="text-align: center;color: gray;">HOTELS IN BAY AREA</h4>
+    <div id="hotels_map" style="height: 480px;"></div>
+</div>
+<script>
+    (async () => {
+        try {
+            const response = await fetch('http://localhost:8090/cities');
+            if(response){
+                const myJson = await response.json();
+                const select = document.getElementById("select-city");
+                const cities = myJson.data;
+                cities.forEach((key)=> select.options[select.options.length] = new Option(key,key.toLowerCase()));
+            }
+        }
+        catch (e) {
+            console.error("Error fetching cities"+e)
+        }
+    })();
+</script>
+<script src="assets/js/home.js?v=0.0.0.1" type="text/javascript"></script>
+#parse( "src/main/webapp/view/layout/footer.vm" )

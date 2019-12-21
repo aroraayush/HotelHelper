@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+.navbar-nav li.active{
+    border-bottom: 4px solid #41acea;
+}
+.navbar-nav li.active a{
+    background: #ffffff !important;
+}
+.navbar-nav li a:hover{
+    color: #000000 !important;
+}
+thead tr th, table.dataTable.no-footer{
+    border-color: #c5c5c5 !important;
+}
+.navbar li > a{
+    line-height: 16px !important;
+}
+.logout-root{
+    display: block;
+    cursor: pointer;
+}
+
+#hotels_map{
+    margin-left: 75px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 75px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.font-big{
+    font-weight: normal;
+    font-size: xx-large;
+}
+
+.nav_logo{
+    float: left;
+    margin-left: 24px;
+    margin-top: 14px;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.nav_dropbtn {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav_dropbtn:hover, .nav_dropbtn:focus {
+    background-color: #b5b9b6;
+}
+
+.nav_dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.nav_dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav_dropdown a:hover {background-color: #ddd;}
+
+.nav_show {display: block;}
+
+.like_hotel_button{
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border:none;
+    border-bottom: 1px solid #208e81;
+    box-shadow: 0px 2px 2px -2px rgba(0,0,0,0.5);
+    margin-right: 10px;
+    text-decoration: none;
+    float:right;
+}
+.like_hotel_button{
+    background:#41acea;
+}
+.table_headers{
+    font-weight: bold;
+    font-size: x-large;
+    color: #286090;
+    margin-bottom: 10px;
+}

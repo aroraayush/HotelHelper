@@ -1,0 +1,16 @@
+#parse( "src/main/webapp/view/layout/header.vm" )
+<script> const hotelsArr = $visitedLinks</script>
+<div class="container super_parent">
+    <div class="col-md-12">
+        <button type="button" id="clear_links" style="display: none;float:right; margin-right: 50px;" class="btn btn-danger">Clear History</button>
+    </div>
+    <div class="col-md-12 no_links_visited" style="margin-top: 15px">
+        <div class="table_headers col-md-3">Hotel Name</div>
+        <div class="table_headers col-md-6">Expedia Link</div>
+        <div class="table_headers col-md-3">Visited On</div>
+    </div>
+    <div class="hotels_parent">
+    </div>
+</div>
+<script src="assets/js/visited_links.js?v=0.0.0.1" type="text/javascript"></script>
+#parse( "src/main/webapp/view/layout/footer.vm" )

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/main.css?v=0.0.6" media="all" type="text/css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" media="all" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/ayusharora44/image/upload/v1574152608/fav.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>$title</title>
+    #if( $importMapsAPI == true )
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBovD9ARF-Yx7vpLHUO9WLP-KpciLhy32A&callback=initMap" async defer></script>
+    #end
+</head>
+<body>
+    #if( $importNav != false )
+        #parse( "src/main/webapp/view/layout/nav.vm" )
+    #end

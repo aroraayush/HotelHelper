@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default">
+    <a href="/home" class="navbar-left">
+        <img class="custom_brand_logo d-inline-block align-top" src="/assets/images/logo.svg" alt="logo" style="float: left;margin-left: 27px;margin-top: 5px;" height="50">
+        <span class="nav_logo">TravelHelper</span>
+    </a>
+    <ul class="nav navbar-nav">
+        <li style="margin-left: 20px;font-size: large;margin-top: 8px;font-weight: 300;">
+            <a href="/home" class="navbar-left">Home</a>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li style="margin: 10px;"><strong>Last Login :</strong> <br> $last_login_time</li>
+        <li class="logout-root nav_dropdown ">
+            <button onclick="myFunction()" class="nav_dropbtn"> $name <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span><br>Your Lists & Links<span class="caret"></span></button>
+            <div id="myDropdown" class="nav_dropdown-content">
+                <a href="/wishlist">Your Wishlist</a>
+                <a href="/visited">Visited Links</a>
+            </div>
+        </li>
+        <li class="logout-root"><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log Out</a></li>
+    </ul>
+    </div>
+</nav>
+<script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            const dropdown = document.getElementsByClassName("nav_dropdown-content");
+            for (let i = 0; i < dropdown.length; i++) {
+                const openDropdown = dropdown[i];
+                if (openDropdown.classList.contains('nav_show')) {
+                    openDropdown.classList.remove('nav_show');
+                }
+            }
+        }
+    }
+</script>

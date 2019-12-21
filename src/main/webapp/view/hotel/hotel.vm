@@ -1,0 +1,83 @@
+#parse( "src/main/webapp/view/layout/header.vm" )
+<script>
+    const lat = "" + $hotelObj.latitude ;
+    const lng = "" + $hotelObj.longitude ;
+    const city = "" + $hotelObj.city ;
+    const hotel_id = "" + $hotelId ;
+    const username = "" + $name;
+    const name = "" + $hotelObj.name;
+    const address = $hotelObj.address + ", " + $hotelObj.city + ", " + $hotelObj.state;
+</script>
+<div class="col-md-12">
+    <div class="col-md-7" style="margin-left: 35px;margin-right: 35px;">
+        <div class="row">
+            <div class="col-md-9">
+                <h3 id="hotel_name"></h3>
+                <h4 id="hotel_address"></h4>
+            </div>
+            <div class="col-md-3">
+                <button id="add_wishlist_hotel" type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Wishlist</button>
+                <button id="remove_wishlist_hotel" type="button" class="btn btn-danger" style="display: none"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Wishlist</button>
+                <div style="margin-top: 8px;" id="expedia_link"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="hotel_map" style="height: 250px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Reviews :</h3>
+            </div>
+            <div class="col-md-7">
+            </div>
+            <div class="col-md-2" style="text-align: right;margin-top: 16px;">
+                <button type="button" id="add_review_btn" class="btn btn-primary">Add Review</button>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <form id="review-form" style="display: none">
+                <hr>
+                Title
+                <input type="text" id="review_title">
+                <br>
+                <br>
+                Text
+                <input type="text" id="review_text" style="width: 420px;">
+                <br>
+                <br>
+                Rating
+                <select id="rating_select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <br>
+                <br>
+                Do you recommend hotel to others ?
+                <select id="is_recommended">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <br>
+                <br>
+                <input type="hidden" id="form-type" value="post">
+                <button type="button" id="submit_review_btn" class="btn btn-primary">Submit</button>
+                <hr>
+            </form>
+        </div>
+        <div class="row">
+            <div id="reviews_parent" class="reviews_parent"></div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-3 attractions_parent_div" style="display: none">
+        <div class="row" style="text-align: center;">
+            <h3>Nearby Attractions :</h3>
+        </div>
+        <div class="attractions_parent"><hr></div>
+    </div>
+</div>
+<script src="assets/js/hotel.js?v=0.0.0.6" type="text/javascript"></script>
+#parse( "src/main/webapp/view/layout/footer.vm" )

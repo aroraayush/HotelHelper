@@ -1,0 +1,13 @@
+#parse( "src/main/webapp/view/layout/header.vm" )
+<script> const hotelsArr = $wishList</script>
+<div class="container super_parent">
+    <div class="col-md-12" style="margin-top: 30px;margin-bottom: 20px;">
+        <div class="table_headers col-md-5">Name</div>
+        <div class="table_headers col-md-4">Added On</div>
+        <div class="table_headers col-md-3"></div>
+    </div>
+    <div class="hotels_parent">
+    </div>
+</div>
+<script src="assets/js/wishlist.js?v=0.0.0.1" type="text/javascript"></script>
+#parse( "src/main/webapp/view/layout/footer.vm" )

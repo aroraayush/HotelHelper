@@ -1,0 +1,20 @@
+#parse( "src/main/webapp/view/layout/header.vm" )
+<script> const hotelsArr = $hotelArr</script>
+<div class="container">
+    <div class="col-md-12" style="text-align: center; margin-bottom: 30px; color: #9c3137;"><h3 style="font-weight: 300;">Results For | <strong>City</strong> : $city
+    #if($hotelPattern)
+        | <strong>Hotel Pattern</strong> : $hotelPattern
+    #end
+    </h3><hr></div>
+    <div class="row" style="margin-bottom: 20px;">
+        <div class="table_headers col-md-5">Name</div>
+        <div class="table_headers col-md-2">Address</div>
+        <div class="table_headers col-md-2">Rating</div>
+        <div class="table_headers col-md-2">Details</div>
+        <div class="table_headers col-md-1">Map</div>
+    </div>
+    <div class="hotels_parent">
+    </div>
+</div>
+<script src="assets/js/hotels.js?v=0.0.0.4" type="text/javascript"></script>
+#parse( "src/main/webapp/view/layout/footer.vm" )

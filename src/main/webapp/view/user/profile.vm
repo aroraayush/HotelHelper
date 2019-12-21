@@ -1,0 +1,2 @@
+#parse( "src/main/webapp/view/layout/header.vm" )
+#parse( "src/main/webapp/view/layout/footer.vm" )
