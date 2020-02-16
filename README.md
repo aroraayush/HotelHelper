@@ -1,5 +1,6 @@
 # TravelHelper
-A web application to explore hotels based on reviews &amp; nearby attractions (Fetched from Google Places API), adding them to wishlist
+A  application to explore hotels based on reviews &amp; nearby attractions (Fetched from Google Places API), adding them to wishlist
+Social behaviors tracking with review liking & commenting for enhanced user experience
 
 > Testing - Add Data to Database, run the DataLoader Utility
 
